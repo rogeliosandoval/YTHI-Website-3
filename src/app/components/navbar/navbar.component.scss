@@ -1,0 +1,48 @@
+@import 'include-media';
+
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+    height: 50px;
+    width: 100vw;
+    background-color: #f7a12a;
+
+    mat-icon {
+        flex-wrap: wrap;
+        color: #ffffff;
+        padding: 5px;
+    }
+
+    span {
+        font-size: small;
+        font-weight: bold;
+    }
+}
+
+.sub-nav__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav {
+    height: 100px;
+    width: 100vw;
+    background-color: black;
+}
+
+@include media('<desktop') {
+    .sub-nav {
+        span {
+            font-size: x-small;
+        }
+    }
+}
+
+@include media('<tablet') {
+    .sub-nav {
+        display: none;
+    }
+}
