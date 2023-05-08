@@ -13,4 +13,14 @@ export class NavbarComponent {
         { icon: 'star', info: 'TREC#21507 Inspector James Williams' },
         { icon: 'star', info: 'TPCL #877175' }
     ]
+
+    navLinks = [
+        { name: 'Home' },
+        { name: 'About' },
+        { name: 'Services' },
+        { name: 'Our Reviews' },
+        { name: 'Contact' },
+        { name: 'Careers' },
+        { name: 'Our Blog' }
+    ]
 }

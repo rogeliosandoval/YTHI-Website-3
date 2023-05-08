@@ -30,7 +30,26 @@
 .main-nav {
     height: 100px;
     width: 100vw;
-    background-color: black;
+}
+
+.main-nav__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.main-nav-links__link {
+    text-align: center;
+    font-size: large;
+    padding: 5px;
+    width: 8em;
+    background: hotpink;
+}
+
+.main-nav__logo {
+    padding: 0.8em;
+    width: 150px;
 }
 
 @include media('<desktop') {
