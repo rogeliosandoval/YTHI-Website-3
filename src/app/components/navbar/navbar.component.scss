@@ -34,7 +34,7 @@
 
 .main-nav__links {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 1em;
 }
@@ -44,7 +44,6 @@
     font-size: large;
     padding: 5px;
     width: 8em;
-    background: hotpink;
 }
 
 .main-nav__logo {
@@ -57,6 +56,10 @@
         span {
             font-size: x-small;
         }
+    }
+
+    .main-nav-links__link {
+        font-size: smaller;
     }
 }
 
