@@ -28,27 +28,31 @@
 }
 
 .main-nav {
-    height: 100px;
+    display: flex;
+    justify-content: right;
     width: 100vw;
 }
 
 .main-nav__links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 1em;
 }
 
 .main-nav-links__link {
     text-align: center;
     font-size: large;
-    padding: 5px;
+    padding: 1rem 0.2rem;
     width: 8em;
+}
+
+.main-nav-links__link:hover {
+    cursor: pointer;
+    background: rgb(71, 71, 212);
 }
 
 .main-nav__logo {
     padding: 0.8em;
-    width: 150px;
 }
 
 @include media('<desktop') {
