@@ -35,5 +35,12 @@ $ythi-website-3-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+  background-image: radial-gradient( circle 953px at 10% 20%,  rgba(22,79,141,1) 0%, rgb(25, 31, 95) 100.2% );
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
