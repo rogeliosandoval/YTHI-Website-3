@@ -2,3 +2,17 @@
 //     width: 100%;
 //     object-fit: cover;
 // }
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+
+.home-landing__text {
+    h2, h4 {
+        text-align: center;
+        color: #ffffff;
+    }
+}
