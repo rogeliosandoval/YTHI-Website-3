@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
+    public showNav: any;
+
     subNav = [
         { icon: 'phone', info: '(210) 367-2945' },
         { icon: 'email', info: 'info@yourtimehomeinspections.com' },

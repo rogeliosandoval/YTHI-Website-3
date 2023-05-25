@@ -7,11 +7,11 @@
     gap: 0.8em;
     height: 50px;
     width: 100vw;
-    background-color: #f7a12a;
+    background-color: #FFC11A;
 
     mat-icon {
         flex-wrap: wrap;
-        color: #ffffff;
+        color: white;
         padding: 5px;
     }
 
@@ -27,35 +27,119 @@
     align-items: center;
 }
 
-.main-nav {
-    display: flex;
-    justify-content: right;
-    width: 100vw;
-    background: #fff;
+.main-nav-button {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    z-index: 3;
+
+    button {
+        mat-icon {
+            transition-duration: 0.5s;
+            transition-property: transform;
+        }
+    }
+
+    button:hover {
+        mat-icon {
+            transform: rotate(360deg);
+        }
+    }
 }
 
-.main-nav__links {
+.main-nav-menu {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    background: black;
+    z-index: 3;
+}
+
+.main-nav-menu__close {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50px;
+    width: 50px;
+    color: rgb(198, 88, 33);
+    background: #ffc11a;
+    border-bottom-right-radius: 15px;
+    
+    mat-icon {
+        transition-duration: 0.5s;
+        transition-property: transform;
+    }
 }
 
-.main-nav-links__link {
-    text-align: center;
-    font-size: large;
-    padding: 1rem 0.2rem;
-    width: 8em;
-}
-
-.main-nav-links__link:hover {
+.main-nav-menu__close:hover {
     cursor: pointer;
-    background: #f7a12a;
-    color: #ffffff;
+    mat-icon {
+        transform: rotate(360deg);
+    }
 }
 
-.main-nav__logo {
-    padding: 0.8em;
+.main-nav-dropback {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.5;
+    z-index: 2;
 }
+
+.slide-in {
+    animation: slideInRight 0.3s forwards;
+}
+
+.slide-out {
+    animation: slideOutRight 0.3s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+    z-index: 0;
+}
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(500px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(500px);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 0.5; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+// @keyframes tilt-n-move-shaking {
+//     0% { transform: translate(0, 0) rotate(0deg); }
+//     25% { transform: translate(5px, 5px) rotate(5deg); }
+//     50% { transform: translate(0, 0) rotate(0eg); }
+//     75% { transform: translate(-5px, 5px) rotate(-5deg); }
+//     100% { transform: translate(0, 0) rotate(0deg); }
+// }
 
 @include media('<desktop') {
     .sub-nav {
