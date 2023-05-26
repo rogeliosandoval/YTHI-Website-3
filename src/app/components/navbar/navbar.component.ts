@@ -25,4 +25,10 @@ export class NavbarComponent {
         { name: 'Careers' },
         { name: 'Our Blog' }
     ]
+
+    hide() {
+        setTimeout(() => {
+            this.showNav = null;
+        }, 300)
+    }
 }
