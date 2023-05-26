@@ -1,10 +1,10 @@
 <section class="home">
-    <div class="home__landing">
+    <div class="home-landing">
         <video> <!--autoplay muted loop-->
             <source src="assets/video/inspecting.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <div class="home__caption">
+        <div class="home-landing__caption">
             <div>
                 Don't risk your family's financial future and safety.
                 <br/>
@@ -14,6 +14,21 @@
                 <button mat-raised-button color="primary">Schedule An Appointment</button>
             </div>
             <img src="assets/logo.png" alt="logo">
+        </div>
+    </div>
+    <div class="home-body">
+        <h1>The Right Choice.</h1>
+        <h1>Home Inspector in <span>San Antonio, TX</span></h1>
+        <p>
+            Buying or selling a home is a monumental endeavor. Your Time Home Inspections in San Antonio will provide you with the professional and courteous inspection you deserve during this complex transaction. Reports are delivered within 24 hrs. Award-winning customer service. Competitive pricing. James Williams of Your Time Home Inspections is the home inspector to call for your home inspection needs. Call or book your home inspection online today
+        </p>
+        <div class="home-body__cards">
+            <div *ngFor="let card of cards" class="home-body__cards-card">
+                <mat-icon>{{card.icon}}</mat-icon>
+                <br/>
+                <strong>{{card.title}}</strong>
+                {{card.text}}
+            </div>
         </div>
     </div>
 </section>
