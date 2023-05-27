@@ -2,6 +2,16 @@
 $primary: #ffC11a;
 $accent: #01579b;
 
+.navbar {
+    img {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        z-index: 3;
+        width: 200px;
+    }
+}
+
 .navbar-sub-nav {
     display: flex;
     justify-content: center;
@@ -33,9 +43,8 @@ $accent: #01579b;
 
 .navbar-main-nav-button {
     position: fixed;
-    right: 0;
+    right: 1rem;
     top: 4rem;
-    padding: 0 30px;
     z-index: 1;
 
     button {
