@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'navbar',
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 
 export class NavbarComponent {
     public showNav: any;
+    @ViewChild('navbar-sub-nav', { static: false }) private smallNav!: ElementRef<HTMLDivElement>;
+    public isScrolledIntoView!: boolean;
 
     subNav = [
         { icon: 'phone', info: '(210) 367-2945' },
@@ -30,5 +32,9 @@ export class NavbarComponent {
         setTimeout(() => {
             this.showNav = null;
         }, 300)
+    }
+
+    @HostListener('window:scroll', ['$event']) onScrollEvent($event:any) {
+
     }
 }

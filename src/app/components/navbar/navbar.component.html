@@ -1,6 +1,6 @@
 <section class="navbar">
     <div class="navbar-sub-nav">
-        <div class="navbar-sub-nav__icons" *ngFor="let sub of subNav" >
+        <div #smallNav class="navbar-sub-nav__icons" *ngFor="let sub of subNav" >
             <mat-icon>{{sub.icon}}</mat-icon> <span>{{sub.info}}</span>
         </div>
     </div>
