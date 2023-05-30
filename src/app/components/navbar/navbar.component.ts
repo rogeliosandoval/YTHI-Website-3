@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
     selector: 'navbar',
@@ -8,8 +8,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 export class NavbarComponent {
     public showNav: any;
-    @ViewChild('navbar-sub-nav', { static: false }) private smallNav!: ElementRef<HTMLDivElement>;
-    public isScrolledIntoView!: boolean;
+    public sticky = false;
 
     subNav = [
         { icon: 'phone', info: '(210) 367-2945' },
@@ -28,13 +27,21 @@ export class NavbarComponent {
         { name: 'Our Blog' }
     ]
 
+    @HostListener('window:keydown.enter', ['$event']) onClick($event:any) {
+        console.log(this.sticky);
+    }
+
+    @HostListener('window:scroll', ['$event']) onScroll($event:any) {
+        if (window.scrollY >= 50) {
+            this.sticky = true;
+        } else {
+            this.sticky = false;
+        }
+    }
+
     hide() {
         setTimeout(() => {
             this.showNav = null;
         }, 300)
-    }
-
-    @HostListener('window:scroll', ['$event']) onScrollEvent($event:any) {
-
     }
 }
