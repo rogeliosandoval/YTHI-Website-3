@@ -5,7 +5,7 @@
         </div>
     </div>
     <img src="assets/logo.png" alt="logo">
-    <div class="navbar-main-nav-button">
+    <div class="navbar-main-nav-button" [ngClass]="sticky ? 'fixed-nav' : 'absolute-nav'">
         <button mat-fab color="primary" (click)="showNav = true">
             <mat-icon>menu</mat-icon>
         </button>

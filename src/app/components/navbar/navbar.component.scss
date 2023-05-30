@@ -5,10 +5,10 @@ $accent: #01579b;
 .navbar {
     img {
         position: absolute;
-        top: 1rem;
+        top: 4rem;
         left: 2rem;
         z-index: 3;
-        width: 200px;
+        width: 150px;
     }
 }
 
@@ -42,10 +42,7 @@ $accent: #01579b;
 }
 
 .navbar-main-nav-button {
-    position: fixed;
-    right: 1rem;
-    top: 4rem;
-    z-index: 1;
+    z-index: 3;
 
     button {
         mat-icon {
@@ -59,6 +56,18 @@ $accent: #01579b;
             transform: rotate(180deg);
         }
     }
+}
+
+.fixed-nav {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+}
+
+.absolute-nav {
+    position: absolute;
+    right: 30px;
+    top: 70px;
 }
 
 .navbar-main-nav-menu {
@@ -188,6 +197,14 @@ $accent: #01579b;
 }
 
 @include media('<tablet') {
+    .navbar {
+        img {
+            top: 2rem;
+            left: 1.5rem;
+            width: 100px;
+        }
+    }
+
     .navbar-sub-nav {
         display: none;
     }
