@@ -41,10 +41,11 @@ html, body {
   background-image: radial-gradient( circle 953px at 10% 20%,  rgba(22,79,141,1) 0%, rgb(25, 31, 95) 100.2% );
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-size: larger;
   font-family: 'Alata', sans-serif;
   line-height: 1.5;
