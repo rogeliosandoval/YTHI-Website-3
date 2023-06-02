@@ -90,6 +90,44 @@ section {
     }
 }
 
+.home-body__tips {
+    padding: 40px 5px;
+}
+
+.home-body__tips-one {
+    position: relative;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &:before {
+            display: inline-block;
+            content: '';
+            height: 50px;
+            width: 10px;
+            background: $primary;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        width: 400px;
+        opacity: 0.3;
+        filter: grayscale(1);
+        z-index: -1;
+    }
+
+    p {
+        
+        width: 40%;
+    }
+}
+
+
+
 @include media('<desktop') {
     .home__caption { 
         gap: 2rem;
