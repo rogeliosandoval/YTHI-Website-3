@@ -91,11 +91,17 @@ section {
 }
 
 .home-body__tips {
-    padding: 40px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 250px;
+    padding: 50px 0 200px;
 }
 
 .home-body__tips-one {
     position: relative;
+    flex: 50%;
 
     h1 {
         display: flex;
@@ -113,7 +119,43 @@ section {
 
     img {
         position: absolute;
-        top: 0;
+        top: -20px;
+        left: -70px;
+        width: 450px;
+        opacity: 0.3;
+        filter: grayscale(1);
+        z-index: -1;
+    }
+
+    p {
+        text-align: center;
+        max-width: 400px;
+    }
+}
+
+.home-body__tips-two {
+    position: relative;
+    flex: 50%;
+
+    h1 {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        column-gap: 10px;
+
+        &:after {
+            display: inline-block;
+            content: '';
+            height: 50px;
+            width: 10px;
+            background: $primary;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: -50px;
+        left: -30px;
         width: 400px;
         opacity: 0.3;
         filter: grayscale(1);
@@ -121,11 +163,65 @@ section {
     }
 
     p {
-        
-        width: 40%;
+        text-align: center;
+        max-width: 400px;
+        margin-left: auto;
     }
 }
 
+.home-body__tips-three {
+    position: relative;
+    flex: 100%;
+
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+
+        &:before {
+            display: inline-block;
+            content: '';
+            margin: 0 10px;
+            height: 50px;
+            width: 10px;
+            background: $primary;
+        }
+    
+        &:after {
+            display: inline-block;
+            content: '';
+            margin: 0 10px;
+            height: 50px;
+            width: 10px;
+            background: $primary;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 90%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        opacity: 0.3;
+        filter: grayscale(1);
+        z-index: -1;
+    }
+
+    p {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.home-body__slogan {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    background: rgb(187, 187, 187);
+}
 
 
 @include media('<desktop') {
