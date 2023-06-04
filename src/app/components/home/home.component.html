@@ -11,7 +11,7 @@
                 Get your property inspected by a PRO.
                 <br/>
                 <br/>
-                <button mat-raised-button color="primary">Schedule An Appointment</button>
+                <button mat-raised-button color="primary">Schedule Inspection</button>
             </div>
         </div>
     </div>
@@ -39,21 +39,38 @@
             </div>
             <div class="home-body__tips-two">
                 <h1>Pre-Listing Inspection</h1>
-                <img src="../../../assets/clipart/glass.png" alt="glass-image">
+                <img src="assets/clipart/glass.png" alt="glass-image">
                 <p>
                     Have a better understanding of the condition of your property with our residential home inspection. Buy with confidence!
                 </p>
             </div>
             <div class="home-body__tips-three">
                 <h1>Investment Property</h1>
-                <img src="../../../assets/clipart/clipboard.png" alt="clipboard-image">
+                <img src="assets/clipart/clipboard.png" alt="clipboard-image">
                 <p>
                     Expand your portfolio with confidence using our investment property inspections. Quick & Reliable.
                 </p>
             </div>
+            <div class="home-body__tips-four">
+                <img src="assets/employees/kalen-transparent.png" alt="">
+                <span>
+                    "Call us and we can tell you MORE!"
+                    <br/>
+                    <small>(210) 367-2945</small>
+                </span>
+            </div>
         </div>
     </div>
-    <div class="home-body__slogan">
-        
+    <div class="home-body__nachi">
+        <img src="assets/logo.png" alt="logo">
+        <div class="home-body__nachi-list">
+            <h3>Inspected Once, Inspected Right®</h3>
+            <h1>InterNACHI Trained & Certified</h1>
+            <ul>
+                <li *ngFor="let info of certifiedList">
+                    {{info}}
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
