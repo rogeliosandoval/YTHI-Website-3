@@ -44,7 +44,7 @@ section {
 }
 
 .home-body {
-    padding: 40px 40px 0;
+    padding: 40px 80px 0;
     margin: auto;
     max-width: 1200px;
 
@@ -95,7 +95,7 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    row-gap: 200px;
+    row-gap: 185px;
     padding: 50px 0 0;
 }
 
@@ -211,6 +211,16 @@ section {
     position: relative;
     flex: 50%;
 
+    button {
+        position: absolute;
+        top: 15%;
+        left: -90px;
+        color: rgb(198, 88, 33);
+        font-size: large;
+        font-weight: bold;
+        padding: 1.5rem 3rem;
+    }
+
     img {
         max-width: 400px;
     }
@@ -230,16 +240,22 @@ section {
     }
 }
 
-.home-body__nachi {
+.home__nachi {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(187, 187, 187);
+}
+
+.home__nachi-wrapper {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 5rem;
-    position: relative;
-    width: 100vw;
-    height: auto;
+    max-width: 1600px;
+    margin: auto;
     padding: 50px 0;
-    background-color: rgb(187, 187, 187);
+
 
     img {
         max-width: 400px;
@@ -268,6 +284,12 @@ section {
     }
 }
 
+.home-body__testimonials {
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    padding: 250px 0;
+}
 
 @include media('<desktop') {
     .home__caption { 

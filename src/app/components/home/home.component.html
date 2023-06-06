@@ -19,7 +19,7 @@
         <h1>The Right Choice.</h1>
         <h1>Home Inspector in <span>San Antonio, TX</span></h1>
         <p>
-            Buying or selling a home is a monumental endeavor. Your Time Home Inspections in San Antonio will provide you with the professional and courteous inspection you deserve during this complex transaction. Reports are delivered within 24 hrs. Award-winning customer service. Competitive pricing. James Williams of Your Time Home Inspections is the home inspector to call for your home inspection needs. Call or book your home inspection online today
+            Buying or selling a home is a monumental endeavor. Your Time Home Inspections in San Antonio will provide you with the professional and courteous inspection you deserve during this complex transaction. Reports are delivered within 24 hrs. Award-winning customer service. Competitive pricing. James Williams of Your Time Home Inspections is the home inspector to call for your home inspection needs. Call or book your home inspection online today!
         </p>
         <div class="home-body__cards">
             <div *ngFor="let card of cards" class="home-body__cards-card">
@@ -52,6 +52,7 @@
                 </p>
             </div>
             <div class="home-body__tips-four">
+                <button mat-raised-button color="primary">200% Guarantee</button>
                 <img src="assets/employees/kalen-transparent.png" alt="">
                 <span>
                     "Call us and we can tell you MORE!"
@@ -61,16 +62,28 @@
             </div>
         </div>
     </div>
-    <div class="home-body__nachi">
-        <img src="assets/logo.png" alt="logo">
-        <div class="home-body__nachi-list">
-            <h3>Inspected Once, Inspected Right®</h3>
-            <h1>InterNACHI Trained & Certified</h1>
-            <ul>
-                <li *ngFor="let info of certifiedList">
-                    {{info}}
-                </li>
-            </ul>
+    <div class="home__nachi">
+        <div class="home__nachi-wrapper">
+            <img src="assets/logo.png" alt="logo">
+            <div class="home__nachi-list">
+                <h3>Inspected Once, Inspected Right®</h3>
+                <h1>InterNACHI Trained & Certified</h1>
+                <ul>
+                    <li *ngFor="let info of certifiedList">
+                        {{info}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="home-body">
+        <div class="home-body__testimonials">
+            <span>
+                {{testimonial}}
+            </span>
+            <br/>
+            <button mat-raised-button color="accent" (click)="previousTestimonial()">LEFT</button>
+            <button mat-raised-button color="accent" (click)="nextTestimonial()">RIGHT</button>
         </div>
     </div>
 </section>
