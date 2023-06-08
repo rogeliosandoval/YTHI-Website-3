@@ -285,10 +285,45 @@ section {
 }
 
 .home-body__testimonials {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     gap: 20px;
     text-align: center;
-    padding: 20px;
-    padding: 250px 0;
+    padding: 80px 20px;
+}
+
+.home-body__testimonials-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    h2 {
+        margin: 0;
+        
+        &:before {
+            display: inline-block;
+            content: '';
+            width: 4px;
+            height: 25px;
+            margin-right: 8px;
+            background-color: $primary;
+        }
+    }
+
+    span {
+        position: absolute;
+        font-size: smaller;
+        top: -27px;
+        left: -15px;
+        opacity: 0.7;
+    }
+}
+
+.home-body__testimonials-text {
+    font-size: larger;
+    max-width: 600px;
 }
 
 @include media('<desktop') {

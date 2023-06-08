@@ -11,11 +11,11 @@ export class HomeComponent {
     constructor(){}
 
     public testimonials = [
-        '"1 Always a great experience. Always take great care of my clients with each and every inspection."',
-        '"2 I would recommend your inspection be conducted by them! Thorough and report submitted in a timely manner!"',
-        '"3 I\'m a Realtor and Your Time Home Inspections had great availability and came out quick to inspect and did a great job and had a keen eye. I will be using them again."',
-        '"4 James was very professional. He was able to answer all my questions. Very pleased with their services. Would definitely recommend the company."',
-        '"5 Dope service. Third time using them."'
+        'Always a great experience. Always take great care of my clients with each and every inspection.',
+        'I would recommend your inspection be conducted by them! Thorough and report submitted in a timely manner!',
+        'I\'m a Realtor and Your Time Home Inspections had great availability and came out quick to inspect and did a great job and had a keen eye. I will be using them again.',
+        'James was very professional. He was able to answer all my questions. Very pleased with their services. Would definitely recommend the company.',
+        'Dope service. Third time using them.'
     ]
 
     public i = 0;

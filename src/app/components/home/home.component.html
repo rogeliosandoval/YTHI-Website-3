@@ -78,12 +78,17 @@
     </div>
     <div class="home-body">
         <div class="home-body__testimonials">
-            <span>
-                {{testimonial}}
-            </span>
-            <br/>
-            <button mat-raised-button color="accent" (click)="previousTestimonial()">LEFT</button>
-            <button mat-raised-button color="accent" (click)="nextTestimonial()">RIGHT</button>
+            <div class="home-body__testimonials-header">
+                <span>what people say about us</span>
+                <h2>Client Testimonials</h2>
+            </div>
+            <div class="home-body__testimonials-text">
+                <span>
+                    {{testimonial}}
+                </span>
+            </div>
         </div>
+        <!-- <button mat-raised-button color="accent" (click)="previousTestimonial()">LEFT</button>
+        <button mat-raised-button color="accent" (click)="nextTestimonial()">RIGHT</button> -->
     </div>
 </section>
