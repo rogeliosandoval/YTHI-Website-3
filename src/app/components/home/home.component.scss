@@ -322,14 +322,18 @@ section {
 }
 
 .home-body__testimonials-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     font-size: larger;
-    max-width: 600px;
+    width: 600px;
+    height: 200px;
 
-    span {
+    div {
         &:before {
             position: absolute;
-            top: -80px;
+            top: -50px;
             left: -50px;
             font-size: 200px;
             opacity: 0.5;
@@ -339,7 +343,7 @@ section {
         }
         &:after {
             position: absolute;
-            top: -80px;
+            top: -50px;
             right: -50px;
             font-size: 200px;
             opacity: 0.5;
@@ -348,6 +352,15 @@ section {
             content: '\"';
         }
     }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @include media('<desktop') {
