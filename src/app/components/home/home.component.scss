@@ -322,8 +322,32 @@ section {
 }
 
 .home-body__testimonials-text {
+    position: relative;
     font-size: larger;
     max-width: 600px;
+
+    span {
+        &:before {
+            position: absolute;
+            top: -80px;
+            left: -50px;
+            font-size: 200px;
+            opacity: 0.5;
+            z-index: -1;
+            color: $accent;
+            content: '\"';
+        }
+        &:after {
+            position: absolute;
+            top: -80px;
+            right: -50px;
+            font-size: 200px;
+            opacity: 0.5;
+            z-index: -1;
+            color: $accent;
+            content: '\"';
+        }
+    }
 }
 
 @include media('<desktop') {
