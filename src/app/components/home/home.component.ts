@@ -8,7 +8,9 @@ import { Component } from "@angular/core";
 
 export class HomeComponent {
 
-    constructor(){}
+    constructor(){
+        // this.loopTestimonial();
+    }
 
     public testimonials = [
         'Always a great experience. Always take great care of my clients with each and every inspection.',
@@ -20,6 +22,8 @@ export class HomeComponent {
 
     public i = 0;
     public testimonial = this.testimonials[this.i];
+    private count = 4;
+    public fade = false;
 
 
     public cards = [
@@ -41,7 +45,18 @@ export class HomeComponent {
         'Inspecting Foundation Walls and Piers course.'
     ]
 
-    nextTestimonial() {
+    loopTestimonial(): void {
+        setTimeout(() => {
+            this.nextTestimonial();
+            this.fade = true;
+            setTimeout(() => {
+                this.fade = false;
+            },500)
+            this.loopTestimonial();
+        }, 5000)
+    }
+
+    nextTestimonial(): void {
         if (this.i <= 3) {
             this.i = this.i + 1;
         } else {
@@ -50,7 +65,7 @@ export class HomeComponent {
         this.testimonial = this.testimonials[this.i];
     }
 
-    previousTestimonial() {
+    previousTestimonial(): void {
         if (this.i > 0) {
             this.i = this.i - 1;
         } else {
