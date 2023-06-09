@@ -290,7 +290,7 @@ section {
     align-items: center;
     gap: 20px;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .home-body__testimonials-header {
@@ -351,6 +351,39 @@ section {
             color: $accent;
             content: '\"';
         }
+    }
+}
+
+.home-body__certs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    background-color: $accent;
+
+    &:before {
+        position: absolute;
+        top: -50px;
+        left: -80px;
+        content:'';
+        height: 180px;
+        width: 180px;
+        background: url('/assets/clipart/medal.svg');
+    }
+}
+
+.home-body__certs-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 30%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+
+    img {
+        width: 205px;
     }
 }
 
