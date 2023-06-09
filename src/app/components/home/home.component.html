@@ -92,5 +92,11 @@
         </div>
         <!-- <button mat-raised-button color="accent" (click)="previousTestimonial()">LEFT</button>
         <button mat-raised-button color="accent" (click)="nextTestimonial()">RIGHT</button> -->
+        <h1 style="text-align:center; padding-bottom:40px;">Yes, we have <span>certifications</span>!</h1>
+        <div class="home-body__certs">
+            <div class="home-body__certs-icon" *ngFor="let cert of certifications">
+                <img src="{{cert}}" alt="icon">
+            </div>
+        </div>
     </div>
 </section>
