@@ -1,0 +1,87 @@
+@import 'include-media';
+$primary: #ffC11a;
+$accent: #01579b;
+
+.footer {
+    background-color: $accent;
+    padding: 50px 0 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.footer__contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    padding: 20px 0;
+
+    img {
+        width: 250px;
+    }
+
+    button {
+        color: rgb(198, 88, 33);
+        font-size: large;
+        font-weight: bold;
+        padding: 1.5rem 3rem;
+    }
+}
+
+.footer__contact-info {
+    color: white;
+
+    h2 {
+        color: $primary;
+        text-align: center;
+        margin: 0;
+    }
+
+    ul {
+        font-size: larger;
+        padding: 0;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 10px;
+            text-align: center;
+            list-style-type: none;
+        }
+    }
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0 60px;
+
+    img {
+        width: 60px;
+        transition: 0.2s;
+    }
+
+    img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.footer__copyright {
+    font-size: smaller;
+    color: white;
+    text-align: center;
+    background-color: rgba(65, 105, 225, 0.438);
+    padding: 10px 0;
+    opacity: 0.8;
+
+    small {
+        span {
+            color: $primary;
+        }
+    }
+}
