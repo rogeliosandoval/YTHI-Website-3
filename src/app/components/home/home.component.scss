@@ -34,6 +34,7 @@ section {
         font-size: xx-large;
         padding: 0 20px;
         // text-align: left;
+
         button {
             color: rgb(198, 88, 33);
             font-size: large;
@@ -44,7 +45,7 @@ section {
 }
 
 .home-body {
-    padding: 40px 80px 0;
+    padding: 40px 40px 0;
     margin: auto;
     max-width: 1200px;
 
@@ -64,6 +65,9 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 50px;
 }
 
 .home-body__cards-card {
@@ -251,10 +255,12 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 5rem;
+    flex-wrap: wrap;
+    column-gap: 2px;
+    row-gap: 30px;
     max-width: 1600px;
     margin: auto;
-    padding: 50px 0;
+    padding: 50px 5px;
 
 
     img {
@@ -288,6 +294,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     text-align: center;
     padding: 60px 20px;
@@ -360,6 +367,8 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-color: $accent;
@@ -367,7 +376,7 @@ section {
     &:before {
         position: absolute;
         top: -50px;
-        left: -80px;
+        left: -70px;
         content:'';
         height: 180px;
         width: 180px;
@@ -386,6 +395,11 @@ section {
     img {
         width: 205px;
     }
+}
+
+.cert-title {
+    text-align: center !important;
+    padding-bottom: 40px;
 }
 
 .fade-in {
@@ -410,15 +424,183 @@ section {
             width: 7rem;
         }
     }
+
+    .home-body {
+        h1 {
+            font-size: 1.7rem;
+            margin: 0;
+            text-align: left;
+    
+            span {
+                color: $primary;
+            }
+        }
+    }
+    
+    .home-body__cards {
+        justify-content: center;
+        column-gap: 50px;
+    }
+
+    .home-body__cards-card {
+        padding: 10px 20px;
+        height: 220px;
+    
+        mat-icon {
+            transform: scale(2.2);
+        }
+    }
+
+    .home-body__tips {
+        row-gap: 80px;
+        padding: 30px 0 0;
+    }
+
+    .home-body__tips-one, .home-body__tips-two, .home-body__tips-three, .home-body__tips-four {
+        justify-content: center;
+        text-align: center;
+        flex: 100%;
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 10px;
+    
+            &:before {
+                display: none;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    
+        p {
+            background-color: rgba(0, 0, 0, 0.51);
+            border-radius: 20px;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            max-width: 600px;
+        }
+    }
+
+    .home-body__tips-one, .home-body__tips-two {
+        img {
+            top: -20px;
+            left: -20px;
+            width: 250px;
+        }
+    }
+
+    .home-body__tips-three {
+        img {
+            top: 100px;
+            left: 120px;
+            width: 300px;
+        }
+    }
+
+    .home-body__tips-four {
+        display: flex;
+        justify-content: center;
+
+        button {
+            display: none;
+        }
+
+        img {
+            max-width: 290px;
+        }
+    
+        span {
+            top: 140px;
+            right: 0;
+    
+            small {
+                color: $primary;
+            }
+        }
+    }
+
+    .home__nachi {
+        background-color: rgb(187, 187, 187);
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    .home__nachi-wrapper {
+        position: relative;
+        max-width: 1600px;
+        margin: auto;
+        padding: 20px 20px;
+
+        img {
+            display: block;
+            position: absolute;
+            left: 0;
+            z-index: -1;
+            opacity: 0.4;
+            filter: brightness(50%);
+        }
+    
+        h3 {
+            font-size: medium;
+        }
+    
+        h1 {
+            font-size: larger;
+        }
+    
+        ul {
+            padding: 20px;
+            font-size: medium;
+            z-index: 2;
+        }
+    }
+
+    .home-body__testimonials {
+        column-gap: 30px;
+        row-gap: 5px;
+        padding: 30px 20px;
+    }
+    
+    .home-body__testimonials-text {
+        font-size: large;
+
+        div {
+            &:before {
+                left: -10px;
+            }
+            &:after {
+                right: -10px;
+            }
+        }
+    }
+
+    .home-body__certs {
+        &:before {
+            width: 130px;
+            height: 130px;
+            left: -50px;
+        }
+    }
+    
+    .home-body__certs-icon {
+        img {
+            width: 140px;
+        }
+    }
 }
 
 @include media('<tablet') {
-    .home__caption {
+    .home-landing__caption {
         padding: 2rem 1rem;
         text-align: left;
 
         div {
-            font-size: large;
+            font-size: larger;
             button {
                 padding: 1.5rem 1rem;
             }
@@ -427,5 +609,53 @@ section {
         img {
             display: none;
         }
+
+        // div{
+        //     font-weight: bold;
+        //     font-size: xx-large;
+        //     padding: 0 20px;
+        //     // text-align: left;
+    
+        //     button {
+        //         color: rgb(198, 88, 33);
+        //         font-size: large;
+        //         font-weight: bold;
+        //         padding: 1.5rem 3rem;
+        //     }
+        // }
+    }
+
+    .home-body {
+        padding: 40px 15px 0;
+    }
+
+    .home-body__tips {
+        row-gap: 50px;
+        padding: 15px 0 0;
+    }
+
+    .home-body__tips-one, .home-body__tips-two, .home-body__tips-three {
+        img {
+            display: none;
+        }
+    }
+
+    .home__nachi-wrapper {
+    
+        ul {
+            padding: 20px;
+            font-size: small;
+        }
+    }
+
+    .home-body__certs {
+        &:before {
+            display: none;
+        }
+    }
+
+    .cert-title {
+        text-align: center !important;
+        padding-bottom: 20px;
     }
 }
