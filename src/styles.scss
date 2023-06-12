@@ -35,6 +35,7 @@ $ythi-website-3-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import 'include-media';
 
 html, body {
   height: 100%;
@@ -50,4 +51,10 @@ body {
   font-family: 'Alata', sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+}
+
+@include media('<tablet') {
+  body {
+    font-size: medium;
+  }
 }
