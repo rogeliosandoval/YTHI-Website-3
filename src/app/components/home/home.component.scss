@@ -367,11 +367,12 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     padding: 20px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    background-color: $accent;
+    background-color: white;
+    // background-color: rgb(187, 187, 187);
     
     &:before {
         position: absolute;
@@ -388,12 +389,13 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 30%;
-    aspect-ratio: 3/2;
+    flex: 15%;
     object-fit: contain;
+    // mix-blend-mode: color-burn;
 
     img {
-        width: 205px;
+        border-radius: 10px;
+        width: 150px;
     }
 }
 
