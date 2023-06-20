@@ -625,16 +625,18 @@ section {
     .home-body__tips-one, .home-body__tips-two {
         img {
             top: -20px;
-            left: -20px;
+            left: 5px;
             width: 150px;
+            opacity: 0.2;
         }
     }
 
     .home-body__tips-three {
         img {
-            top: 100px;
-            left: 120px;
-            width: 200px;
+            top: 60px;
+            left: 60px;
+            width: 150px;
+            opacity: 0.2;
         }
     }
 
