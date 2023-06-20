@@ -622,9 +622,19 @@ section {
         padding: 15px 0 0;
     }
 
-    .home-body__tips-one, .home-body__tips-two, .home-body__tips-three {
+    .home-body__tips-one, .home-body__tips-two {
         img {
-            display: none;
+            top: -20px;
+            left: -20px;
+            width: 150px;
+        }
+    }
+
+    .home-body__tips-three {
+        img {
+            top: 100px;
+            left: 120px;
+            width: 200px;
         }
     }
 
