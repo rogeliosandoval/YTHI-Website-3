@@ -18,13 +18,13 @@ export class NavbarComponent {
     ]
 
     navLinks = [
-        { name: 'Home' },
-        { name: 'About' },
-        { name: 'Services' },
-        { name: 'Our Reviews' },
-        { name: 'Contact' },
-        { name: 'Careers' },
-        { name: 'Our Blog' }
+        { name: 'Home', route: 'home' },
+        { name: 'About', route: 'about' },
+        { name: 'Services', route: 'services' },
+        { name: 'Our Reviews', route: 'reviews' },
+        { name: 'Contact', route: 'contact' },
+        { name: 'Careers', route: 'careers' },
+        { name: 'Our Blog', route: 'blog' }
     ]
 
     @HostListener('window:keydown.enter', ['$event']) onClick($event:any) {

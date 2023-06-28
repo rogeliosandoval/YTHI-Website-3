@@ -10,6 +10,7 @@
             <mat-icon>menu</mat-icon>
         </button>
     </div>
+    <!--MAKE SURE TO SCROLL BACK TO THE TOP ON ROUTE CHANGE-->
     <div
         class="navbar-main-nav-menu"
         *ngIf="showNav == true || showNav == false"
@@ -19,7 +20,7 @@
         </div>
         <div class="navbar-main-nav-menu__nav-links">
             <div *ngFor="let navLink of navLinks" class="navbar-main-nav-menu__nav-links-link">
-                {{navLink.name}}
+                <span routerLink="/{{navLink.route}}" (click)="showNav = false; hide()">{{navLink.name}}</span>
             </div>
         </div>
     </div>
