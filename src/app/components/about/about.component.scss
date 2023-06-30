@@ -1,7 +1,46 @@
-h1 {
-    padding-top: 100px;
+@import 'include-media';
+$primary: #ffC11a;
+$accent: #01579b;
+
+section {
+    color: white
+}
+
+.about-landing {
+    position: relative;
+    width: 100vw;
+
+    video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        filter: brightness(40%);
+    }
+}
+
+.about-landing__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
     text-align: center;
-    color: lightcoral;
-    height: 100vh;
-    margin: 0;
+    color: white;
+    height: 50vh;
+
+    div{
+        font-weight: bold;
+        font-size: xx-large;
+        margin-top: 50px;
+        padding: 0 20px;
+        // text-align: left;
+
+        button {
+            color: rgb(198, 88, 33);
+            font-size: large;
+            font-weight: bold;
+            padding: 1.5rem 3rem;
+        }
+    }
 }
