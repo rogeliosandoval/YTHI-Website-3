@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { MatDialog } from '@angular/material/dialog';
+import { GuaranteeDialog } from "src/app/dialogs/guarantee/guarantee.component";
 
 @Component({
     selector: 'home',
@@ -8,7 +10,9 @@ import { Component } from "@angular/core";
 
 export class HomeComponent {
 
-    constructor(){
+    constructor(
+        private matDialog: MatDialog
+    ){
         this.loopTestimonial();
     }
 
@@ -65,7 +69,7 @@ export class HomeComponent {
         'assets/icons/c15.png'
     ]
 
-    loopTestimonial(): void {
+    public loopTestimonial(): void {
         setTimeout(() => {
             this.nextTestimonial();
             this.fade = true;
@@ -76,7 +80,7 @@ export class HomeComponent {
         }, 5000)
     }
 
-    nextTestimonial(): void {
+    public nextTestimonial(): void {
         if (this.i <= 5) {
             this.i = this.i + 1;
         } else {
@@ -85,12 +89,16 @@ export class HomeComponent {
         this.testimonial = this.testimonials[this.i];
     }
 
-    previousTestimonial(): void {
+    public previousTestimonial(): void {
         if (this.i > 0) {
             this.i = this.i - 1;
         } else {
             this.i = 4;
         }
         this.testimonial = this.testimonials[this.i];
+    }
+
+    public openGuarantee(): void {
+        this.matDialog.open(GuaranteeDialog)
     }
 }
