@@ -1,13 +1,30 @@
+@import 'include-media';
+$primary: #ffC11a;
+$accent: #01579b;
+
 section {
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 400px;
-    height: 200px;
+    height: auto;
     background-color: black;
+    padding: 40px;
+    background-color: $accent;
 
     h3 {
-        color: hotpink;
+        color: $primary;
         margin: 0;
     }
+
+    p {
+        font-size: smaller;
+    }
+}
+
+section p:nth-of-type(2) {
+    font-size: small;
+    font-style: italic;
 }
