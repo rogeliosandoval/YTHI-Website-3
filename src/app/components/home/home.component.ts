@@ -9,7 +9,6 @@ import { GuaranteeDialog } from "src/app/dialogs/guarantee/guarantee.component";
 })
 
 export class HomeComponent {
-
     constructor(
         private matDialog: MatDialog
     ){
@@ -28,7 +27,6 @@ export class HomeComponent {
 
     public i = 0;
     public testimonial = this.testimonials[this.i];
-    private count = 4;
     public fade = false;
 
 
@@ -86,7 +84,6 @@ export class HomeComponent {
         } else {
             this.i = 0;
         }
-        this.testimonial = this.testimonials[this.i];
     }
 
     public previousTestimonial(): void {
@@ -95,7 +92,6 @@ export class HomeComponent {
         } else {
             this.i = 4;
         }
-        this.testimonial = this.testimonials[this.i];
     }
 
     public openGuarantee(): void {
