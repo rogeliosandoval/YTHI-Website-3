@@ -222,7 +222,7 @@ section {
         color: rgb(198, 88, 33);
         font-size: large;
         font-weight: bold;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 1.3rem;
     }
 
     img {
@@ -332,6 +332,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 20px;
     position: relative;
     font-size: larger;
     width: 600px;
