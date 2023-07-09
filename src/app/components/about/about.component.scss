@@ -78,3 +78,37 @@ section {
         margin-top: 30px;
     }
 }
+
+.about-body__owners {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+
+    img {
+        border: 4px solid white;
+        border-radius: 30px;
+        max-width: 500px;
+    }
+}
+
+.about-body__owners--description {
+    max-width: 600px;
+    text-align: left;
+
+    h2 {
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    p {
+        strong {
+            color: $primary;
+        }
+
+        span {
+            font-size: smaller;
+        }
+    }
+
+}
