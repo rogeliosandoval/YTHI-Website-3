@@ -8,7 +8,7 @@ section {
 
 .about-landing {
     position: relative;
-    width: 100vw;
+
 
     video {
         width: 100%;
@@ -110,4 +110,33 @@ section {
             font-size: smaller;
         }
     }
+}
+
+.about-team-landing {
+    position: relative;
+    width: 100vw;
+
+    video {
+        width: 100%;
+        height: 250px;
+        position: absolute;
+        object-fit: cover;
+        filter: brightness(40%);
+    }
+}
+
+.about-team-landing__caption{
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 100px;
+
+    div{
+        font-weight: bold;
+        font-size: xx-large;
+    }
+}
+
+@include media('<desktop') {
+
 }
