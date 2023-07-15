@@ -185,6 +185,12 @@ $accent: #01579b;
 // }
 
 @include media('<desktop') {
+    .navbar {
+        img {
+            display: none;
+        }
+    }
+    
     .navbar-sub-nav {
         span {
             font-size: x-small;
