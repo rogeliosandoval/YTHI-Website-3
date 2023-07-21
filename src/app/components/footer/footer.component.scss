@@ -7,6 +7,16 @@ $accent: #01579b;
     // padding: 50px 0 0;
 }
 
+.footer__mini-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: purple;
+}
+
 .footer__contact {
     display: flex;
     justify-content: space-evenly;
