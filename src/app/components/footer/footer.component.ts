@@ -7,5 +7,7 @@ import { Component } from "@angular/core";
 })
 
 export class FooterComponent {
-
+    public socialIcons = [
+        'facebook', 'instagram', 'google', 'youtube', 'linkedin'
+    ]
 }

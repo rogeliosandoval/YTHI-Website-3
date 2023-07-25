@@ -1,8 +1,8 @@
 <section class="footer">
     <div class="footer__mini-top">
         <span>Get connected with us on social networks:</span>
-        <div class="footer__mini-top--icons" *ngFor="let">
-
+        <div class="footer__mini-top--icons" *ngFor="let icons of socialIcons">
+            <img src="../../../assets/icons/{{icons}}.png" alt="icon">
         </div>
     </div>
     <div class="footer__contact">
