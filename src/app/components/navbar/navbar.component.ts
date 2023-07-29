@@ -39,7 +39,7 @@ export class NavbarComponent {
         }
     }
 
-    hide() {
+    public hide(): void {
         setTimeout(() => {
             this.showNav = null;
         }, 300)
