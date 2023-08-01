@@ -36,6 +36,8 @@ $ythi-website-3-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import 'include-media';
+$primary: #ffC11a;
+$accent: #01579b;
 
 html, body {
   height: 100%;
