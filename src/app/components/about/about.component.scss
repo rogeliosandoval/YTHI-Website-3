@@ -1,6 +1,5 @@
 @import 'include-media';
-$primary: #ffC11a;
-$accent: #01579b;
+@import 'src/variables.scss';
 
 section {
     color: white
