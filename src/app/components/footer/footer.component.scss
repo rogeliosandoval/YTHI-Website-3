@@ -1,6 +1,5 @@
 @import 'include-media';
-$primary: #ffC11a;
-$accent: #01579b;
+@import 'src/variables.scss';
 
 .footer {
     background-color: $accent;
@@ -8,16 +7,33 @@ $accent: #01579b;
 
 .footer__mini-top {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
     width: 100%;
     height: 50px;
-    background-color: purple;
+    background-color: navy;
 
     img {
-        width: 100px;
+        width: 25px;
+        transition: 0.1s linear;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
     }
+}
+
+.footer__mini-top-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer__mini-top--icons {
+    display: flex;
 }
 
 .footer__contact {
@@ -94,5 +110,9 @@ $accent: #01579b;
 }
 
 @include media('<tablet') {
-
+    .footer__mini-top {
+        span {
+            display: none;
+        }
+    }
 }
