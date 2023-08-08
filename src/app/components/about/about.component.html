@@ -58,8 +58,23 @@
         </div>
     </div>
     <div class="about-body">
-        <div class="about-body__support-team">
-            <img src="../../../assets/employees/elvia.jpg" alt="elvia">
+        <div class="about-body__team">
+            <div class="about-body__team-member" *ngFor="let employee of supportTeam">
+                <span>
+                    {{employee.displayName}}
+                </span>
+                <img src="../../../assets/employees/{{employee.name}}.jpg" alt="employee">
+            </div>
         </div>
     </div>
+    <!-- <div class="about-body">
+        <div class="about-body__team">
+            <div class="about-body__team-member" *ngFor="let employee of inspectors">
+                <span>
+                    {{employee.displayName}}
+                </span>
+                <img src="../../../assets/employees/{{employee.name}}.jpg" alt="employee">
+            </div>
+        </div>
+    </div> -->
 </section>
