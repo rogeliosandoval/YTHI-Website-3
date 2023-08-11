@@ -13,7 +13,7 @@ export class AboutComponent {
         {name: 'roger', displayName: 'Roger Sandoval'}
     ]
 
-    public inspectors = [
+    public inspectors: Array<any> = [
         {name: 'james', displayName: 'James Williams'},
         {name: 'luis', displayName: 'Luis Vargas'},
         {name: 'robbie', displayName: 'Robbie Spencer'}
