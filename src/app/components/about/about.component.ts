@@ -20,8 +20,4 @@ export class AboutComponent {
     ]
 
     public animation: Array<any> = []
-
-    public test(): void {
-        console.log('this is a test')
-    }
 }
