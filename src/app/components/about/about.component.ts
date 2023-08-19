@@ -18,6 +18,4 @@ export class AboutComponent {
         {name: 'luis', displayName: 'Luis Vargas'},
         {name: 'robbie', displayName: 'Robbie Spencer'}
     ]
-
-    public animation: Array<any> = []
 }
