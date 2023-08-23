@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 })
 
 export class AboutComponent {
+    public title: string = ''
+    public name: string = ''
     public supportTeam: Array<any> = [
         {name: 'elvia', displayName: 'Elvia Williams'},
         {name: 'kalen', displayName: 'Kalen Bahlman'},
