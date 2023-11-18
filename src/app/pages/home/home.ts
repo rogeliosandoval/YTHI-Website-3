@@ -4,11 +4,11 @@ import { GuaranteeDialog } from "src/app/dialogs/guarantee/guarantee.component";
 
 @Component({
     selector: 'home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
+    templateUrl: './home.html',
+    styleUrls: ['./home.scss'],
 })
 
-export class HomeComponent {
+export class Home {
 
     constructor(
         private matDialog: MatDialog
@@ -49,24 +49,6 @@ export class HomeComponent {
         'Deck Inspection course.',
         'Moisture Intrusion Inspection course.',
         'Inspecting Foundation Walls and Piers course.'
-    ]
-
-    public certifications = [
-        'assets/icons/c1.png',
-        'assets/icons/c2.png',
-        'assets/icons/c3.png',
-        'assets/icons/c4.png',
-        'assets/icons/c5.png',
-        'assets/icons/c6.png',
-        'assets/icons/c7.png',
-        'assets/icons/c8.png',
-        'assets/icons/c9.png',
-        'assets/icons/c10.png',
-        'assets/icons/c11.png',
-        'assets/icons/c12.png',
-        'assets/icons/c13.png',
-        'assets/icons/c14.png',
-        'assets/icons/c15.png'
     ]
 
     public loopTestimonial(): void {

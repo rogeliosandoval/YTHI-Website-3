@@ -93,11 +93,6 @@
         <!-- prev, nect buttons -->
         <!-- <button mat-raised-button color="accent" (click)="previousTestimonial()">LEFT</button>
         <button mat-raised-button color="accent" (click)="nextTestimonial()">RIGHT</button> -->
-        <h1 class="cert-title">Yes, we have <span>certifications</span>!</h1>
-        <div class="home-body__certs">
-            <div class="home-body__certs-icon" *ngFor="let cert of certifications">
-                <img src="{{cert}}" alt="icon">
-            </div>
-        </div>
+        <certifications></certifications>
     </div>
 </section>
