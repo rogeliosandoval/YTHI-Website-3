@@ -57,6 +57,12 @@ section {
         }
     }
 
+    h2 {
+        padding-top: 15px;
+        text-align: center;
+        color: $primary;
+    }
+
     button {
         color: rgb(198, 88, 33);
         font-size: large;
@@ -129,6 +135,10 @@ section {
         object-fit: cover;
         filter: brightness(40%);
     }
+
+    .about-team-landing__caption-small {
+        display: none;
+    }
 }
 
 .about-team-landing__caption{
@@ -148,7 +158,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    padding-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .about-body__team-member {
@@ -157,16 +167,21 @@ section {
     align-items: center;
     flex-direction: column;
 
-    span {
-        color: white;
-        margin-bottom: 10px;
-    }
-
     img {
         width: 300px;
         border: 4px solid white;
         border-radius: 30px;
     }
+}
+
+.about-body__team-member span:nth-child(1) {
+    color: white;
+}
+
+.about-body__team-member span:nth-child(2) {
+    font-size: smaller;
+    color: $primary;
+    margin-bottom: 10px;
 }
 
 @include media('<desktop') {
@@ -198,6 +213,29 @@ section {
             font-size: smaller;
         }
     }
+
+    .about-body__team-member {
+        img {
+            width: 260px;
+            border: 2px solid white;
+        }
+    }
+
+    .about-team-landing {
+        height: 20px;
+        padding-bottom: 50px;
+
+        video,
+        .about-team-landing__caption {
+            display: none;
+        }
+
+        .about-team-landing__caption-small {
+            font-size: xx-large;
+            text-align: center;
+            display: block;
+        }
+    }
 }
 
 @include media('<tablet') {
@@ -220,19 +258,5 @@ section {
 
     .about-body {
         padding: 15px 15px 0;
-    }
-
-    .about-team-landing {
-        video {
-            height: 150px;
-        }
-    }
-
-    .about-team-landing__caption {
-        top: 50px;
-
-        div {
-            text-align: center;
-        }
     }
 }

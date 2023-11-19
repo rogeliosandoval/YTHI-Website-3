@@ -53,28 +53,34 @@
         </video>
         <div class="about-team-landing__caption">
             <div>
-                Our Support Team
+                Our Team
             </div>
         </div>
+        <span class="about-team-landing__caption-small">
+            Our Team
+        </span>
     </div>
     <div class="about-body">
         <div class="about-body__team">
             <div class="about-body__team-member" *ngFor="let employee of supportTeam">
-                <span>
+                <span style="padding-bottom: 10px;">
                     {{employee.displayName}}
                 </span>
                 <img src="../../../assets/employees/{{employee.name}}.jpg" alt="employee">
             </div>
         </div>
-    </div>
-    <!-- <div class="about-body">
-        <div class="about-body__team">
+        <h2>Your Inspectors</h2>
+        <div class="about-body__team" style="padding-bottom: 30px;">
             <div class="about-body__team-member" *ngFor="let employee of inspectors">
                 <span>
                     {{employee.displayName}}
                 </span>
+                <span>
+                    TREC #{{employee.trec}}
+                </span>
                 <img src="../../../assets/employees/{{employee.name}}.jpg" alt="employee">
             </div>
         </div>
-    </div> -->
+        <certifications></certifications>
+    </div>
 </section>
