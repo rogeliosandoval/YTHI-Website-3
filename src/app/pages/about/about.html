@@ -1,6 +1,6 @@
 <section class="about">
     <div class="about-landing">
-        <video> <!--autoplay muted loop-->
+        <video autoplay muted loop> <!--autoplay muted loop-->
             <source src="assets/video/team.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
@@ -9,7 +9,7 @@
                 We Want To Be Your Home Inspection Team!
                 <br/>
                 <br/>
-                <button mat-raised-button color="primary">200% Guarantee</button>
+                <button mat-raised-button color="primary" (click)="openGuarantee()">200% Guarantee</button>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
         </div>
     </div>
     <div class="about-team-landing">
-        <video> <!--autoplay muted loop-->
+        <video autoplay muted loop> <!--autoplay muted loop-->
             <source src="assets/video/call.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
