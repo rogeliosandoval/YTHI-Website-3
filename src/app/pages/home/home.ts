@@ -81,6 +81,6 @@ export class Home {
     }
 
     public openGuarantee(): void {
-        this.matDialog.open(GuaranteeDialog)
+        this.matDialog.open(GuaranteeDialog);
     }
 }
