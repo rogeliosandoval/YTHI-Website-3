@@ -1,0 +1,33 @@
+<section class="services">
+    <div class="services-landing">
+        <video autoplay [muted]="true" loop playsinline>
+            <source src="assets/video/inspecting.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>        
+        <div class="services-landing__caption">
+            <div>
+                Inspected Once, Inspected Right
+            </div>
+        </div>
+    </div>
+    <div class="services-body">
+        <h1>InterNACHI <span>Trained</span> & <span>Certified</span></h1>
+        <p>
+            Buying or selling a home is a monumental endeavor. Your Time Home Inspections in San Antonio will provide you with the professional and courteous inspection you deserve during this complex transaction. Reports are delivered within 24 hrs. Award-winning customer service. Competitive pricing. James Williams of Your Time Home Inspections is the home inspector to call for your home inspection needs. Call or book your home inspection online today!
+        </p>
+        <div class="services-body-cards">
+            <div class="services-body-cards__card" *ngFor="let inspection of inspections">
+                <mat-icon>{{inspection.icon}}</mat-icon>
+                <div class="services-body-cards__card-list">
+                    <h2>
+                        {{inspection.category}}
+                    </h2>
+                    <ul *ngFor="let item of inspection.items">
+                        <li>{{item}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <certifications></certifications>
+    </div>
+</section>
