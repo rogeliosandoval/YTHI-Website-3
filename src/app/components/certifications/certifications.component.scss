@@ -1,0 +1,73 @@
+@import 'include-media';
+
+.home-body__certs {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: white;
+    // background-color: rgb(187, 187, 187);
+    
+    &:before {
+        position: absolute;
+        top: -50px;
+        left: -70px;
+        content:'';
+        height: 180px;
+        width: 180px;
+        background: url('/assets/clipart/medal.svg');
+    }
+}
+
+.home-body__certs-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 15%;
+    object-fit: contain;
+    // mix-blend-mode: color-burn;
+
+    img {
+        border-radius: 10px;
+        width: 150px;
+    }
+}
+
+.cert-title {
+    text-align: center !important;
+    padding-bottom: 40px;
+}
+
+@include media('<desktop') {
+    .home-body__certs {
+        &:before {
+            width: 130px;
+            height: 130px;
+            left: -50px;
+        }
+    }
+    
+    .home-body__certs-icon {
+        img {
+            width: 140px;
+        }
+    }
+}
+
+@include media('<tablet') {
+    .home-body__certs {
+        &:before {
+            display: none;
+        }
+    }
+
+    .cert-title {
+        text-align: center !important;
+        padding-bottom: 20px;
+    }
+}
