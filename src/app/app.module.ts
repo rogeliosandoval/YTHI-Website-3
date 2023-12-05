@@ -11,14 +11,17 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AboutComponent } from './components/about/about.component';
+import { Home } from './pages/home/home';
+import { About } from './pages/about/about';
+import { Services } from './pages/services/services';
 import { GuaranteeDialog } from './dialogs/guarantee/guarantee.component';
+import { CertificationsComponent } from './components/certifications/certifications.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent, data: { animation: 'fader' } },
-  { path: 'about', component: AboutComponent, data: { animation: 'fader' } },
+  { path: 'home', component: Home, data: { animation: 'fader' } },
+  { path: 'about', component: About, data: { animation: 'fader' } },
+  { path: 'services', component: Services, data: { animation: 'fader'} },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ]
 
@@ -26,15 +29,17 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
     FooterComponent,
-    AboutComponent,
-    GuaranteeDialog
+    Home,
+    About,
+    Services,
+    GuaranteeDialog,
+    CertificationsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
     MatSlideToggleModule,
     MatButtonModule,
     MatIconModule,
